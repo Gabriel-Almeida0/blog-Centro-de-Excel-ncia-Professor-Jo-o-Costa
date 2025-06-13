@@ -1,0 +1,332 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    min-height: 100vh;
+    background-color: white;
+    position: relative;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  header {
+    background-color: #2563eb; 
+    color: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    position: relative;
+    z-index: 10;
+  }
+  
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 1rem;
+  }
+  
+  .blog-title {
+    font-size: 1.875rem;
+    font-weight: bold;
+    letter-spacing: -0.025em;
+  }
+  
+  .profile-photo {
+    width: 5rem;
+    height: 5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.8);
+    position: relative;
+    z-index: 20;
+    overflow: hidden;
+  }
+  
+  .profile-photo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: block;
+  }
+  
+  nav {
+    background-color: white;
+    border-bottom: 1px solid #e5e7eb;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 5;
+    clear: both;
+  }
+  
+  .nav-content {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0.75rem 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .nav-link {
+    color: #2563eb;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s;
+    padding: 0.25rem 0.5rem;
+  }
+  
+  .nav-link:hover {
+    color: #dc2626;
+  }
+  
+  main {
+    padding: 3rem 1rem;
+  }
+  
+  section {
+    margin-bottom: 3rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #2563eb;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  .topics-container {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .topic-card {
+    position: relative;
+    width: 10rem;
+    height: 10rem;
+    border: 2px solid #dc2626;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .topic-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: opacity 0.2s;
+    opacity: 0;
+  }
+  
+  .topic-card:hover .topic-overlay {
+    opacity: 1;
+  }
+  
+  .topic-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: white;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+    z-index: 2;
+  }
+  
+  .topic-icon {
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  .topic-title {
+    font-weight: 500;
+    text-align: center;
+    padding: 0 0.5rem;
+  }
+  
+  .summary-card {
+    background-color: white;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border: 2px solid #dc2626;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  @media (min-width: 768px) {
+    .summary-card {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+    
+    .summary-text-container {
+      flex: 4;
+    }
+    
+    .summary-image-container {
+      flex: 1;
+      max-width: 25%;
+      margin-left: 1.5rem;
+    }
+  }
+  
+  .summary-text-container {
+    flex: 1;
+  }
+  
+  .summary-text {
+    color: #374151;
+    line-height: 1.625;
+  }
+  
+  .summary-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+  }
+  
+  .summary-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+  
+  footer {
+    background-color: #374151; 
+    border-top: 1px solid #4b5563;
+    color: #f9fafb;
+  }
+  
+  .footer-container {
+    padding: 2rem 1rem;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer-info {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .footer-title {
+    color: #f9fafb;
+    font-weight: bold;
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-copyright {
+    color: #d1d5db;
+    font-size: 0.875rem;
+  }
+  
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .footer-links-title {
+    color: #f9fafb;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-links-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .footer-link {
+    color: #93c5fd;
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  
+  .footer-link:hover {
+    color: #fca5a5;
+  }
+  
+  @media (min-width: 768px) {
+    .footer-content {
+      flex-direction: row;
+    }
+    
+    .footer-info {
+      margin-bottom: 0;
+      text-align: left;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .header-content {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .profile-photo {
+      margin-bottom: 0.5rem;
+    }
+    
+    .nav-content {
+      justify-content: center;
+    }
+  } 
+ /* Resposta errada */
+.respostas input[type="radio"]:checked + label {
+background-color: #f8d7da;
+color: #721c24;
+}
+
+/* Resposta correta */
+.respostas input[type="radio"].correta:checked + label {
+background-color: #d4edda;
+color: #155724;
+}
+/* Estilo para alternativas corretas */
+input[type="radio"]:checked + label.correta {
+background-color: #d4edda;
+color: #155724;
+font-weight: bold;
+}
+
+/* Estilo para alternativas incorretas */
+input[type="radio"]:checked + label.errada {
+background-color: #f8d7da;
+color: #721c24;
+font-weight: bold;
+}
+    

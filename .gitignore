@@ -1,0 +1,5 @@
+comandos_git.ps1
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata 
